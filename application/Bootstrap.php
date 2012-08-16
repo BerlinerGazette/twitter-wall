@@ -27,4 +27,12 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 			}
 		}
 	}
+
+	protected function _initTwitter()
+	{
+		Zend_Registry::set(
+			'twitter',
+			new ArrayObject($this->getOption('twitter'), ArrayObject::ARRAY_AS_PROPS)
+		);
+	}
 }
