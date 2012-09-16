@@ -2,3 +2,4 @@
 data/db/*
 data/twitter/*
 .sass-cache
+/.vagrant
