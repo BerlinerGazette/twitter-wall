@@ -49,6 +49,11 @@ class Application_Model_Tweet
 
 	public function __construct(array $options = null)
 	{
+		if (isset($options['data'])) {
+			foreach($options['data'] as $k => $v) {
+				$this->__set($k, $v);
+			}
+		}
 		if (is_array($options)) {
 			$this->setOptions($options);
 		}
@@ -58,7 +63,7 @@ class Application_Model_Tweet
 	{
 		$method = 'set' . ucfirst($name);
 		if (('mapper' === $name) || !method_exists($this, $method)) {
-			throw new Exception('Invalid property');
+			throw new Exception(sprintf('Invalid property: %s', $method));
 		}
 		$this->$method($value);
 	}
@@ -174,8 +179,13 @@ class Application_Model_Tweet
 
 	public function setCreatedAt($createdAt)
 	{
-		$this->createdAt = (string)$createdAt;
+		$this->createdAt = (string) $createdAt;
 		return $this;
+	}
+
+	public function getCreatedAtDate()
+	{
+		return new DateTime($this->getCreatedAt());
 	}
 
 	public function getCreatedAt()
