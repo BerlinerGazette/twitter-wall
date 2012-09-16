@@ -7,6 +7,6 @@
 [submodule "chef/cookbooks/sqlite"]
 	path = chef/cookbooks/sqlite
 	url = git://github.com/opscode-cookbooks/sqlite.git
-[submodule "chef/coobooks/apt"]
-	path = chef/coobooks/apt
+[submodule "chef/cookbooks/apt"]
+	path = chef/cookbooks/apt
 	url = git://github.com/opscode-cookbooks/apt.git
