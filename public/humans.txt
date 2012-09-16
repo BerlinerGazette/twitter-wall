@@ -1,0 +1,17 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+/* TEAM */
+Code: Marcel Eichner
+Site: http://www.foobugs.com
+Twitter: @ephigenia
+Location: Berlin/Germany
+
+Code: René Oelke
+Site: http://www.foobugs.com
+Twitter: @foobugs
+Location: Berlin/Germany
+
+/* SITE */
+Standards: HTML5, CSS3
+Components: Zend Framework, SCSS, Compass, Javascript

@@ -1,0 +1,40 @@
+@import "compass/reset";
+@import "compass";
+
+// Config
+// ------
+$text-font: Arial, Verdana, Helvetica, Geneva, sans-serif;
+$text-color: black;
+$text-font-size: 14px;
+$text-line-height: 20px;
+
+// Typography
+// ----------
+@include establish-baseline();
+html {
+	font-family: $text-font;
+	color: $text-color;
+	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%;
+}
+
+// fixes
+a img, img {
+	-ms-interpolation-mode: bicubic;
+}
+
+
+// Twitter Wall Styles
+// -------------------
+html {
+	@include background(white);
+}
+
+#main {
+	max-width: 500px;
+}
+#search-form {
+	input {
+		width: 100%;
+	}
+}
