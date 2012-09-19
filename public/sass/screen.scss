@@ -31,7 +31,13 @@ html {
 }
 
 #main {
-	max-width: 500px;
+	.twt-border {
+		min-width: 0 !important;
+	}
+	> header {
+		text-align: center;
+		font-weight: bold;
+	}
 }
 #search-form {
 	input {
