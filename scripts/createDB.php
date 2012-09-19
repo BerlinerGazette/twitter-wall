@@ -79,7 +79,7 @@ try {
 	$sqlSchema = file_get_contents(dirname(__FILE__) . '/schema.twitterwall.sql');
 	// use the connection directly to load sql in batches
 	$dbAdapter->getConnection()->exec($sqlSchema);
-	chmod($dbFile, 0640);
+	chmod($dbFile, 0644);
 
 	printf('Database Created' . PHP_EOL);
 } catch (Exception $e) {

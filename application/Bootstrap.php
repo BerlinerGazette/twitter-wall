@@ -22,8 +22,8 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 				continue;
 			}
 
-			if (false === mkdir($dir, 0750, true)) {
-				throw new Exception('Failed to create directory (' . $dir . ')!');	
+			if (false === mkdir($dir, 0755, true)) {
+				throw new Exception('Failed to create directory (' . $dir . ')!');
 			}
 		}
 	}
