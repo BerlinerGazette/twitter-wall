@@ -1,5 +1,5 @@
 <header>
-	<h1>Twitter #digiyards</h1>
+	<h1>Twitter-Archive #digiyards</h1>
 </header>
 <form action="" id="search-form">
 	<fieldset>
@@ -8,13 +8,14 @@
 </form>
 <div class="tweets">
 	<?php foreach($this->tweets as $Tweet) { ?>
-	<blockquote class="twitter-tweet">
+	<blockquote class="twitter-tweet" lang="de">
 		<p>
 			<?= $this->escape($Tweet->text); ?>
 		</p>&mdash; <?= $Tweet->getFromUserName(); ?> (@<?= $Tweet->getFromUser() ?>)
-		<a href="https://twitter.com/twitterapi/status/<?= $Tweet->getId(); ?>" data-datetime="<?= $Tweet->getCreatedAtDate()->format('c') ?>">
+		<a href="https://twitter.com/twitterapi/status/<?= $Tweet->getIdStr(); ?>" data-datetime="<?= $Tweet->getCreatedAtDate()->format('c') ?>">
 			<?= $Tweet->getCreatedAtDate()->format('d.m.Y H:m') ?>
 		</a>
 	</blockquote>
 	<?php } ?>
+	<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
